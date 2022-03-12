@@ -20,7 +20,7 @@ cd pyspark-stateful-processing-with-twitter-kafka
 pip install -r requirements.txt
 ```
 
-#### 3. Crear un nuevo proyecto y obtener el *consumer key*, *comsumer secret*, *access token* y *access token secret* desde [Twitter Developers](https://developer.twitter.com/en/portal/dashboard). Enviar la información a un nuevo archivo denominado `.env` dentro de *src* con el siguiente comando (reemplazar los <valor> con el valor correspondiente):
+#### 3. Crear un nuevo proyecto y obtener el *consumer key*, *comsumer secret*, *access token* y *access token secret* desde [Twitter Developers](https://developer.twitter.com/en/portal/dashboard). Enviar la información a un nuevo archivo denominado `.env` dentro de *src* con el siguiente comando (reemplazar los `<valor>` con el valor correspondiente):
 ```
 SPARK_HOME=<directorio donde se encuentra instalado spark> > src/.env
 consumer_key=<tu consumer key> >> src/.env
@@ -29,7 +29,7 @@ access_token=<tu access token> >> src/.env
 access_token_secret=<tu access token secret>  >> src/.env
 ```
 
-#### 4. Activar el Zookeper Server y Kafka Server (reemplazar los <valor> con el directorio correspondiente)
+#### 4. Activar el Zookeeper Server y Kafka Server (reemplazar los `<valor>` con el directorio correspondiente)
 ```
 cd <directorio al Zookeeper>
 bin/zkServer.sh start
@@ -37,14 +37,16 @@ cd <directorio al Kafka>
 bin/kafka-server-start.sh config/server.properties
 ```
 
-#### 5. Crear un nuevo tópico de Kafka. El comando tiene la siguiente sintaxis:
+#### 5. Crear un nuevo tópico de Kafka. El comando tiene la siguiente sintaxis (reemplazar los `<valor>` con el valor correspondiente):
 ```
-bin/kafka-topics.sh --create --bootstrap-server <servidor> --replication-factor <valor> --partitions <valor> --topic <tópico>
+bin/kafka-topics.sh --create --bootstrap-server <servidor> --replication-factor <número del factor de replicación> \
+--partitions <número de particiones> --topic <tópico>
 ```
 
 Ejemplo:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic delatam-streaming
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 \
+--partitions 1 --topic delatam-streaming
 ```
 
 #### 6. Iniciar el Jupyter Notebook o uno de los scripts :)
@@ -53,14 +55,16 @@ Para iniciar el Jupyter notebook:
 jupyter notebook src/streaming_app.ipynb
 ```
 
-Para ejecutar uno de los scripts con spark-submit:
+Para ejecutar uno de los scripts con spark-submit (reemplazar los `<valor>` con el valor correspondiente):
 ```
-$SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 src/<nombre del script>.py <tópico de Kafka>
+$SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 \
+src/<nombre del script>.py <tópico de Kafka>
 ```
 
 Por ejemplo:
 ```
-$SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 src/wordcount.py delatam-streaming
+$SPARK_HOME/bin/spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.1 \
+src/wordcount.py delatam-streaming
 ```
 
 Para terminar el job en la terminal, basta presionar `CTRL` + `C`
