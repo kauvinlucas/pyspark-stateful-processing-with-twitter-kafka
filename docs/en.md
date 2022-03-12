@@ -31,10 +31,8 @@ access_token_secret=<access token secret>  >> src/.env
 
 #### 4. Start Zookeeper Server and Kafka Server (replace `<value>` with the corresponding value)
 ```
-cd <path to Zookeeper>
-bin/zkServer.sh start
-cd <path to Kafka>
-bin/kafka-server-start.sh config/server.properties
+<path to Zookeeper>/bin/zkServer.sh start
+<path to Kafka>/bin/kafka-server-start.sh config/server.properties
 ```
 
 #### 5. Create a new Kafka topic. The command has the following syntax:
@@ -81,5 +79,5 @@ For example:
 python src/producer.py delatam-streaming localhost:9092 olympics 50
 ```
 
-## ¿Any problem with following the instructions?
+## ¿Encountered errors while following the instructions?
 Please open a new issue [here](https://github.com/kauvinlucas/pyspark-stateful-processing-with-twitter-kafka/issues).

@@ -31,10 +31,8 @@ access_token_secret=<tu access token secret>  >> src/.env
 
 #### 4. Activar el Zookeeper Server y Kafka Server (reemplazar los `<valor>` con el directorio correspondiente)
 ```
-cd <directorio al Zookeeper>
-bin/zkServer.sh start
-cd <directorio al Kafka>
-bin/kafka-server-start.sh config/server.properties
+<directorio al Zookeeper>/bin/zkServer.sh start
+<directorio al Kafka>/bin/kafka-server-start.sh config/server.properties
 ```
 
 #### 5. Crear un nuevo tópico de Kafka. El comando tiene la siguiente sintaxis (reemplazar los `<valor>` con el valor correspondiente):
