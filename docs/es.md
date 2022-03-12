@@ -1,12 +1,12 @@
 # Cómo utilizar este repositorio
 ## Requisitos
 Para poder ejecutar el `streaming_app.ipynb` o los scripts .py, es necesario tener instalado en su máquina:
-1. Una distribución Linux, una Virtual Machine con Linux o ![WSL con Ubuntu](https://ubuntu.com/wsl) (Windows 10+).
+1. Una distribución Linux, una Virtual Machine con Linux o [WSL con Ubuntu](https://ubuntu.com/wsl) (Windows 10+).
 2. Java (jdk 8 o 11) y Python (con pip). La variable JAVA_HOME debe está definida en el sistema.
 3. Apache Spark (3.1+). La variable SPARK_HOME debe está definida en el sistema.
-4. Apache Kafka (0.1+) y Zookeeper configurado (puedes seguir las instrucciones de instalación ![aquí](https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm))
+4. Apache Kafka (0.1+) y Zookeeper configurado (puedes seguir las instrucciones de instalación [aquí](https://www.tutorialspoint.com/apache_kafka/apache_kafka_installation_steps.htm))
 5. Git
-6. Una cuenta en ![Twitter Developers](https://developer.twitter.com)
+6. Una cuenta en [Twitter Developers](https://developer.twitter.com)
 
 ## Instrucciones
 #### 1. Descargar este repositorio
@@ -76,4 +76,4 @@ python src/producer.py delatam-streaming localhost:9092 olympics 50
 ```
 
 ## ¿Tienes algún problema al utilizar este repositorio?
-Por favor abrir un nuevo tópico en ![issues](https://github.com/kauvinlucas/pyspark-stateful-processing-with-twitter-kafka/issues).
+Por favor abrir un nuevo tópico en [issues](https://github.com/kauvinlucas/pyspark-stateful-processing-with-twitter-kafka/issues).
