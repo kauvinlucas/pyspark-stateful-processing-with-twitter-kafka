@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 #### 3. Create a new project and get the *consumer key*, *comsumer secret*, *access token* and *access token secret* from [Twitter Developers](https://developer.twitter.com/en/portal/dashboard). Send the necessary information to a new file called `.env` in the *src* folder with the following command (replace `<value>` with the corresponding value):
 ```
-SPARK_HOME=<directorio donde se encuentra instalado spark> > src/.env
+SPARK_HOME=<path to Apache Spark folder> > src/.env
 consumer_key=<consumer key> >> src/.env
 consumer_secret=<consumer secret> >> src/.env
 access_token=<access token> >> src/.env
@@ -37,13 +37,13 @@ access_token_secret=<access token secret>  >> src/.env
 
 #### 5. Create a new Kafka topic. The command has the following syntax:
 ```
-bin/kafka-topics.sh --create --bootstrap-server <server uri> --replication-factor <number> \
+<path to Kafka>/bin/kafka-topics.sh --create --bootstrap-server <server uri> --replication-factor <number> \
 --partitions <number> --topic <topic>
 ```
 
 For example:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 \
+<path to Kafka>/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 \
 --partitions 1 --topic delatam-streaming
 ```
 

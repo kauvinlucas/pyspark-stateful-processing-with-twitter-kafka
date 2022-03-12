@@ -37,13 +37,13 @@ access_token_secret=<tu access token secret>  >> src/.env
 
 #### 5. Crear un nuevo tópico de Kafka. El comando tiene la siguiente sintaxis (reemplazar los `<valor>` con el valor correspondiente):
 ```
-bin/kafka-topics.sh --create --bootstrap-server <servidor> --replication-factor <número del factor de replicación> \
+<directorio al Kafka>/bin/kafka-topics.sh --create --bootstrap-server <servidor> --replication-factor <número del factor de replicación> \
 --partitions <número de particiones> --topic <tópico>
 ```
 
 Ejemplo:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 \
+<directorio al Kafka>/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 \
 --partitions 1 --topic delatam-streaming
 ```
 
