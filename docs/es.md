@@ -15,12 +15,12 @@ git clone https://github.com/kauvinlucas/pyspark-stateful-processing-with-twitte
 cd pyspark-stateful-processing-with-twitter-kafka
 ```
 
-#### 2. Ejecutar el siguiente comando para instalar los módulos de Python en su máquina (se recomienda crear antes un entorno virtual de Python. Instrucciones por ![aquí](https://docs.python.org/es/3.8/library/venv.html))
+#### 2. Ejecutar el siguiente comando para instalar los módulos de Python en su máquina (se recomienda crear antes un entorno virtual de Python. Instrucciones por [aquí](https://docs.python.org/es/3.8/library/venv.html))
 ```
 pip install -r requirements.txt
 ```
 
-#### 3. Crear un nuevo proyecto y obtener el *consumer key*, *comsumer secret*, *access token* y *access token secret* desde ![Twitter Developers](https://developer.twitter.com/en/portal/dashboard). Enviar la información a un nuevo archivo denominado `.env` dentro de *src* con el siguiente comando (reemplazar los <valor> con el valor correspondiente):
+#### 3. Crear un nuevo proyecto y obtener el *consumer key*, *comsumer secret*, *access token* y *access token secret* desde [Twitter Developers](https://developer.twitter.com/en/portal/dashboard). Enviar la información a un nuevo archivo denominado `.env` dentro de *src* con el siguiente comando (reemplazar los <valor> con el valor correspondiente):
 ```
 SPARK_HOME=<directorio donde se encuentra instalado spark> > src/.env
 consumer_key=<tu consumer key> >> src/.env
